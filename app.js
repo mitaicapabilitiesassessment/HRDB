@@ -37,4 +37,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(style);
+
+    // Tính năng tìm kiếm (Filter tài liệu trên trang hiện tại)
+    const searchInput = document.querySelector('.search-bar input');
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase().trim();
+            
+            // Lấy tất cả các thẻ thông tin trên trang hiện tại
+            const cards = document.querySelectorAll('.dept-card, .drive-card, .job-card, .info-card, .course-card');
+            
+            cards.forEach(card => {
+                // Lấy toàn bộ nội dung text bên trong thẻ
+                const text = card.textContent.toLowerCase();
+                
+                // Nếu nội dung chứa từ khóa tìm kiếm thì hiển thị, ngược lại ẩn đi
+                if (text.includes(query)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    }
 });
