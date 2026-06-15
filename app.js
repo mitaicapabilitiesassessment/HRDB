@@ -38,14 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.head.appendChild(style);
 
-    // Tính năng tìm kiếm 
+    // Tính năng tìm kiếm (Filter tài liệu trên trang hiện tại)
     const searchInput = document.querySelector('.search-bar input');
     if (searchInput) {
         searchInput.addEventListener('input', function(e) {
             const query = e.target.value.toLowerCase().trim();
             
-            // Lấy tất cả các thẻ thông tin trên trang hiện tại
-            const cards = document.querySelectorAll('.dept-card, .drive-card, .job-card, .info-card, .course-card');
+            // Lấy tất cả các thẻ thông tin trên trang hiện tại bao gồm cả các tài liệu, khóa học và tin tức
+            const cards = document.querySelectorAll('.dept-card, .drive-card, .drive-link-item, .job-card, .info-card, .course-card, .news-list li');
             
             cards.forEach(card => {
                 // Lấy toàn bộ nội dung text bên trong thẻ

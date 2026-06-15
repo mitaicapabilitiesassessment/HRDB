@@ -563,5 +563,13 @@ a {
         display: block;
     }
 
-    .news-date { font-size: 12px; min-width: unset; }
+    .news-date {
+        font-size: 11px;
+        min-width: unset;
+        background: rgba(255, 77, 0, 0.1);
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-weight: 600;
+        display: inline-block;
+    }
 }

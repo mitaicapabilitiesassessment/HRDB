@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HR Portal - Training</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -99,6 +100,11 @@
     </style>
 </head>
 <body>
+    <!-- Mobile: Logo bar trên cùng (bấm về trang chủ) -->
+    <a href="index.html" class="mobile-top-bar">
+        <img src="https://cms.izion24.com.vn/assets/098f2a3e-0f6f-4d96-aa2f-f60034ebe8cb/Logo%20Izion24%2003?width=600&quality=100&fit=contain&format=webp" alt="IZIon24 Logo" class="company-logo">
+    </a>
+
     <div class="background-blobs">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
@@ -202,6 +208,30 @@
             </div>
         </main>
     </div>
+    <!-- Mobile: Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Trang chủ</span>
+        </a>
+        <a href="cb.html" class="mobile-nav-item">
+            <i class="fa-solid fa-money-check-dollar"></i>
+            <span>C&B</span>
+        </a>
+        <a href="training.html" class="mobile-nav-item active">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Training</span>
+        </a>
+        <a href="ta.html" class="mobile-nav-item">
+            <i class="fa-solid fa-users-viewfinder"></i>
+            <span>Tuyển dụng</span>
+        </a>
+        <a href="engagement.html" class="mobile-nav-item">
+            <i class="fa-solid fa-handshake-angle"></i>
+            <span>Engagement</span>
+        </a>
+    </nav>
+
     <script src="app.js"></script>
 </body>
 </html>
