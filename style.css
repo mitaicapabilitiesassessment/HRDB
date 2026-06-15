@@ -412,6 +412,7 @@ a {
     gap: 16px;
     padding-bottom: 16px;
     border-bottom: 1px solid rgba(0,0,0,0.05);
+    align-items: flex-start;
 }
 
 .news-list li:last-child {
@@ -419,21 +420,33 @@ a {
     padding-bottom: 0;
 }
 
+/* Đảm bảo phần nội dung tin tức không bị cắt */
+.news-list li > div {
+    flex: 1;
+    min-width: 0;
+    word-break: break-word;
+}
+
 .news-date {
     font-weight: 600;
     color: var(--primary);
     font-size: 14px;
     min-width: 50px;
+    flex-shrink: 0;
 }
 
 .news-list h4 {
     font-size: 15px;
     margin-bottom: 4px;
+    word-break: break-word;
 }
 
 .news-list p {
     font-size: 13px;
     color: var(--text-muted);
+    word-break: break-word;
+    white-space: normal;
+    overflow: visible;
 }
 
 /* ===================== RESPONSIVE MOBILE ===================== */
