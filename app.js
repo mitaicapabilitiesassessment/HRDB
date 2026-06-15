@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.head.appendChild(style);
 
-    // Tính năng tìm kiếm (Filter tài liệu trên trang hiện tại)
+    // Tính năng tìm kiếm 
     const searchInput = document.querySelector('.search-bar input');
     if (searchInput) {
         searchInput.addEventListener('input', function(e) {
