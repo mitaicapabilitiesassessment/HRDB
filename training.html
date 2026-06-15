@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Portal - Training</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        .page-header h1 { font-size: 32px; margin-bottom: 10px; }
+        .page-header p { opacity: 0.9; font-size: 16px; max-width: 600px; }
+        .page-header .icon-bg {
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 100px;
+            opacity: 0.1;
+        }
+        
+        .training-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 900px) {
+            .training-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .course-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .course-card {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .course-info h3 { margin-bottom: 8px; color: var(--text-main); }
+        .course-meta { display: flex; gap: 16px; font-size: 13px; color: var(--text-muted); }
+        .course-meta span { display: flex; align-items: center; gap: 4px; }
+        
+        .enroll-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .enroll-btn:hover { background: #059669; transform: translateY(-2px); }
+
+        /* Drive Widget */
+        .drive-widget {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: var(--radius);
+            border: 1px solid var(--surface-border);
+        }
+        .drive-widget h3 { margin-bottom: 16px; font-size: 18px; color: var(--text-main); }
+        .drive-link-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            transition: all 0.2s;
+        }
+        .drive-link-item:hover {
+            transform: translateX(5px);
+            border-left: 3px solid #1a73e8;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar glass-panel">
+            <div class="logo">
+                <img src="https://cms.izion24.com.vn/assets/098f2a3e-0f6f-4d96-aa2f-f60034ebe8cb/Logo%20Izion24%2003?width=600&quality=100&fit=contain&format=webp" alt="IZIon24 Logo" class="company-logo">
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i> Trang chủ</a>
+                <a href="cb.html" class="nav-item"><i class="fa-solid fa-money-check-dollar"></i> C&B</a>
+                <a href="training.html" class="nav-item active"><i class="fa-solid fa-graduation-cap"></i> Training</a>
+                <a href="ta.html" class="nav-item"><i class="fa-solid fa-users-viewfinder"></i> Tuyển dụng</a>
+                <a href="engagement.html" class="nav-item"><i class="fa-solid fa-handshake-angle"></i> Engagement</a>
+            </nav>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header glass-panel">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Tìm kiếm khóa học...">
+                </div>
+                <div class="header-actions">
+                    <a href="index.html" class="icon-btn" style="display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+            </header>
+
+            <div class="content-area">
+                <div class="page-header">
+                    <h1>Training & Development</h1>
+                    <p>Nơi nâng cao kỹ năng chuyên môn, kỹ năng mềm và đăng ký các khóa đào tạo nội bộ của công ty.</p>
+                    <i class="fa-solid fa-graduation-cap icon-bg"></i>
+                </div>
+
+                <div class="training-grid">
+                    <!-- Left Column: Courses -->
+                    <div class="courses-section">
+                        <h2 style="margin-bottom: 20px; font-size: 20px;"><i class="fa-regular fa-calendar-check"></i> Lịch Đào Tạo Sắp Tới</h2>
+                        <div class="course-list">
+                            <div class="course-card">
+                                <div class="course-info">
+                                    <h3>Kỹ năng Giao tiếp Hiệu quả</h3>
+                                    <div class="course-meta">
+                                        <span><i class="fa-regular fa-clock"></i> 20/06/2026 - 14:00</span>
+                                        <span><i class="fa-solid fa-location-dot"></i> Phòng họp A</span>
+                                        <span><i class="fa-solid fa-user-tie"></i> Giảng viên: Mr. John</span>
+                                    </div>
+                                </div>
+                                <button class="enroll-btn">Xem chi tiết</button>
+                            </div>
+                            
+                            <div class="course-card">
+                                <div class="course-info">
+                                    <h3>Đào tạo An toàn Thông tin Cơ bản</h3>
+                                    <div class="course-meta">
+                                        <span><i class="fa-regular fa-clock"></i> 25/06/2026 - 09:00</span>
+                                        <span><i class="fa-solid fa-laptop"></i> Online (Zoom)</span>
+                                    </div>
+                                </div>
+                                <button class="enroll-btn">Xem chi tiết</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Drive Links -->
+                    <div class="drive-widget">
+                        <h3><i class="fa-brands fa-google-drive" style="color: #1a73e8;"></i> Thư viện E-Learning (Drive)</h3>
+                        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">Tất cả tài liệu giảng dạy, slide và video ghi hình các buổi học cũ được lưu trữ tại đây.</p>
+                        
+                        <a href="https://drive.google.com" target="_blank" class="drive-link-item">
+                            <i class="fa-solid fa-folder" style="color: #fbbc04; font-size: 24px;"></i>
+                            <div>
+                                <h4 style="font-size: 14px;">Tài liệu Onboarding</h4>
+                                <span style="font-size: 12px; color: #666;">Dành cho nhân viên mới</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://drive.google.com" target="_blank" class="drive-link-item">
+                            <i class="fa-solid fa-folder" style="color: #ea4335; font-size: 24px;"></i>
+                            <div>
+                                <h4 style="font-size: 14px;">Kỹ năng Mềm (Soft Skills)</h4>
+                                <span style="font-size: 12px; color: #666;">Giao tiếp, Lãnh đạo, Time Management</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://drive.google.com" target="_blank" class="drive-link-item">
+                            <i class="fa-solid fa-folder" style="color: #34a853; font-size: 24px;"></i>
+                            <div>
+                                <h4 style="font-size: 14px;">Video Recordings</h4>
+                                <span style="font-size: 12px; color: #666;">Các video quay lại buổi training</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

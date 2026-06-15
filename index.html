@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Portal - Home</title>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome cho icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar glass-panel">
+            <div class="logo">
+                <img src="https://cms.izion24.com.vn/assets/098f2a3e-0f6f-4d96-aa2f-f60034ebe8cb/Logo%20Izion24%2003?width=600&quality=100&fit=contain&format=webp" alt="IZIon24 Logo" class="company-logo">
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item active"><i class="fa-solid fa-house"></i> Trang chủ</a>
+                <a href="cb.html" class="nav-item"><i class="fa-solid fa-money-check-dollar"></i> C&B</a>
+                <a href="training.html" class="nav-item"><i class="fa-solid fa-graduation-cap"></i> Training</a>
+                <a href="ta.html" class="nav-item"><i class="fa-solid fa-users-viewfinder"></i> Tuyển dụng</a>
+                <a href="engagement.html" class="nav-item"><i class="fa-solid fa-handshake-angle"></i> Engagement</a>
+            </nav>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header glass-panel">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Tìm kiếm tài liệu, nhân viên, chính sách...">
+                </div>
+                <div class="header-actions">
+                    <!-- Không cần tính năng cá nhân/login -->
+                </div>
+            </header>
+
+            <div class="content-area">
+                <div class="welcome-section">
+                    <h1>Chào mừng bạn trở lại! 👋</h1>
+                    <p>Hôm nay là một ngày tuyệt vời để hoàn thành những mục tiêu mới.</p>
+                </div>
+
+                <div class="departments-grid">
+                    <!-- C&B Card -->
+                    <a href="cb.html" class="dept-card glass-panel">
+                        <div class="card-icon" style="background: rgba(255, 77, 0, 0.1); color: var(--primary);">
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                        </div>
+                        <h3>C&B</h3>
+                        <p>Lương thưởng, phúc lợi, bảo hiểm, thuế TNCN và các biểu mẫu liên quan.</p>
+                        <span class="card-link">Truy cập <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+
+                    <!-- Training Card -->
+                    <a href="training.html" class="dept-card glass-panel">
+                        <div class="card-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3>Training</h3>
+                        <p>Lịch đào tạo, tài liệu học tập, e-learning và đăng ký khóa học nội bộ.</p>
+                        <span class="card-link">Truy cập <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+
+                    <!-- TA Card -->
+                    <a href="ta.html" class="dept-card glass-panel">
+                        <div class="card-icon" style="background: rgba(59, 130, 246, 0.1); color: #3b82f6;">
+                            <i class="fa-solid fa-users-viewfinder"></i>
+                        </div>
+                        <h3>Talent Acquisition</h3>
+                        <p>Việc làm nội bộ, chính sách giới thiệu, hướng dẫn tiếp nhận nhân sự mới.</p>
+                        <span class="card-link">Truy cập <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+
+                    <!-- Engagement Card -->
+                    <a href="engagement.html" class="dept-card glass-panel">
+                        <div class="card-icon" style="background: rgba(236, 72, 153, 0.1); color: #ec4899;">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                        </div>
+                        <h3>Engagement</h3>
+                        <p>Sự kiện công ty, thư viện hình ảnh, khen thưởng và khảo sát ý kiến.</p>
+                        <span class="card-link">Truy cập <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                </div>
+
+                <div class="dashboard-bottom">
+                    <div class="announcements glass-panel">
+                        <h3><i class="fa-solid fa-bullhorn"></i> Bảng tin & Thông báo</h3>
+                        <ul class="news-list">
+                            <li>
+                                <span class="news-date">15/06</span>
+                                <div>
+                                    <h4>Thông báo nghỉ lễ Giỗ tổ Hùng Vương</h4>
+                                    <p>Công ty sẽ nghỉ làm việc vào ngày 10/03 Âm lịch...</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="news-date">10/06</span>
+                                <div>
+                                    <h4>Cập nhật quy định thanh toán công tác phí</h4>
+                                    <p>Bộ phận kế toán và C&B xin thông báo quy trình mới...</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Portal - Engagement</title>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+            color: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        .page-header h1 { font-size: 32px; margin-bottom: 10px; }
+        .page-header p { opacity: 0.9; font-size: 16px; max-width: 600px; }
+        .page-header .icon-bg {
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 100px;
+            opacity: 0.1;
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 32px;
+        }
+
+        /* Engagement Cards */
+        .engagement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            gap: 20px;
+            transition: all 0.3s;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(236, 72, 153, 0.1);
+        }
+
+        .info-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: rgba(236, 72, 153, 0.1);
+            color: #ec4899;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .info-content h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .info-content p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .info-action {
+            display: inline-block;
+            background: #ec4899;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .info-action:hover {
+            background: #db2777;
+            transform: translateY(-2px);
+        }
+
+        /* Drive links for Gallery/Surveys */
+        .policy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .drive-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            background: white;
+            border-radius: var(--radius);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .drive-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border-color: #fbcfe8; /* Pink light */
+        }
+
+        .drive-icon {
+            width: 50px;
+            height: 50px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #1a73e8;
+        }
+
+        .drive-info h4 { font-size: 16px; margin-bottom: 4px; color: var(--text-main); }
+        .drive-info p { font-size: 13px; color: var(--text-muted); }
+
+    </style>
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar glass-panel">
+            <div class="logo">
+                <img src="https://cms.izion24.com.vn/assets/098f2a3e-0f6f-4d96-aa2f-f60034ebe8cb/Logo%20Izion24%2003?width=600&quality=100&fit=contain&format=webp" alt="IZIon24 Logo" class="company-logo">
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i> Trang chủ</a>
+                <a href="cb.html" class="nav-item"><i class="fa-solid fa-money-check-dollar"></i> C&B</a>
+                <a href="training.html" class="nav-item"><i class="fa-solid fa-graduation-cap"></i> Training</a>
+                <a href="ta.html" class="nav-item"><i class="fa-solid fa-users-viewfinder"></i> Tuyển dụng</a>
+                <a href="engagement.html" class="nav-item active" style="background: #ec4899; color: white;"><i class="fa-solid fa-handshake-angle"></i> Engagement</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header glass-panel">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Tìm kiếm sự kiện, thư viện ảnh...">
+                </div>
+                <div class="header-actions">
+                    <a href="index.html" class="icon-btn" style="display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+            </header>
+
+            <div class="content-area">
+                <div class="page-header">
+                    <h1>Employee Engagement</h1>
+                    <p>Nơi lưu giữ những khoảnh khắc tuyệt vời của công ty, khảo sát mức độ hài lòng và thông tin các sự kiện nội bộ.</p>
+                    <i class="fa-solid fa-handshake-angle icon-bg"></i>
+                </div>
+
+                <h2 class="section-title"><i class="fa-solid fa-calendar-star"></i> Các Sự Kiện Nổi Bật</h2>
+                <div class="engagement-grid">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa-solid fa-plane-departure"></i></div>
+                        <div class="info-content">
+                            <h3>Company Trip 2026</h3>
+                            <p>Thông báo chính thức về chuyến đi nghỉ mát thường niên của công ty tại Phú Quốc. Vui lòng xem thông tin lịch trình và hướng dẫn chi tiết.</p>
+                            <a href="https://drive.google.com" target="_blank" class="info-action">Xem lịch trình</a>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa-solid fa-gift"></i></div>
+                        <div class="info-content">
+                            <h3>Tiệc Sinh Nhật Quý 2</h3>
+                            <p>Chương trình chúc mừng sinh nhật các thành viên có ngày sinh trong tháng 4, 5, 6. Sự kiện dự kiến tổ chức vào thứ Sáu tuần này.</p>
+                            <a href="https://drive.google.com" target="_blank" class="info-action">Chi tiết sự kiện</a>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="section-title"><i class="fa-regular fa-image"></i> Thư Viện Media & Khảo Sát</h2>
+                <div class="policy-grid">
+                    <a href="https://drive.google.com" target="_blank" class="drive-card">
+                        <div class="drive-icon"><i class="fa-solid fa-images" style="color: #10b981;"></i></div>
+                        <div class="drive-info">
+                            <h4>Thư viện hình ảnh (Gallery)</h4>
+                            <p>Album ảnh Year End Party, Teambuilding</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://forms.google.com" target="_blank" class="drive-card">
+                        <div class="drive-icon"><i class="fa-solid fa-clipboard-list" style="color: #8b5cf6;"></i></div>
+                        <div class="drive-info">
+                            <h4>Khảo sát Môi trường làm việc</h4>
+                            <p>Tham gia khảo sát eNPS Quý 2</p>
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com" target="_blank" class="drive-card">
+                        <div class="drive-icon"><i class="fa-solid fa-medal" style="color: #f59e0b;"></i></div>
+                        <div class="drive-info">
+                            <h4>Vinh danh Nhân viên xuất sắc</h4>
+                            <p>Danh sách khen thưởng tháng</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

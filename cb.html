@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Portal - C&B</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, #ff8a00 100%);
+            color: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(255, 77, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        .page-header h1 { font-size: 32px; margin-bottom: 10px; }
+        .page-header p { opacity: 0.9; font-size: 16px; max-width: 600px; }
+        .page-header .icon-bg {
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 100px;
+            opacity: 0.1;
+        }
+        
+        .resource-section {
+            margin-bottom: 30px;
+        }
+        .resource-section h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .drive-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            background: white;
+            border-radius: var(--radius);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .drive-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border-color: var(--primary-light);
+        }
+        .drive-icon {
+            width: 50px;
+            height: 50px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #1a73e8; /* Google Drive color */
+        }
+        .drive-info h4 { font-size: 16px; margin-bottom: 4px; color: var(--text-main); }
+        .drive-info p { font-size: 13px; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar glass-panel">
+            <div class="logo">
+                <img src="https://cms.izion24.com.vn/assets/098f2a3e-0f6f-4d96-aa2f-f60034ebe8cb/Logo%20Izion24%2003?width=600&quality=100&fit=contain&format=webp" alt="IZIon24 Logo" class="company-logo">
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i> Trang chủ</a>
+                <a href="cb.html" class="nav-item active"><i class="fa-solid fa-money-check-dollar"></i> C&B</a>
+                <a href="training.html" class="nav-item"><i class="fa-solid fa-graduation-cap"></i> Training</a>
+                <a href="ta.html" class="nav-item"><i class="fa-solid fa-users-viewfinder"></i> Tuyển dụng</a>
+                <a href="engagement.html" class="nav-item"><i class="fa-solid fa-handshake-angle"></i> Engagement</a>
+            </nav>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header glass-panel">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Tìm kiếm trong C&B...">
+                </div>
+                <div class="header-actions">
+                    <a href="index.html" class="icon-btn" style="display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+            </header>
+
+            <div class="content-area">
+                <div class="page-header">
+                    <h1>Compensation & Benefits (C&B)</h1>
+                    <p>Trung tâm thông tin về Lương thưởng, Phúc lợi, Bảo hiểm và các quy định hành chính dành cho toàn bộ nhân viên công ty.</p>
+                    <i class="fa-solid fa-money-check-dollar icon-bg"></i>
+                </div>
+
+                <div class="resource-section">
+                    <h2><i class="fa-regular fa-folder-open"></i> Thư viện Tài liệu & Chính sách</h2>
+                    <div class="resource-grid">
+                        <a href="https://drive.google.com" target="_blank" class="drive-card">
+                            <div class="drive-icon"><i class="fa-solid fa-calendar-days" style="color:#f59e0b"></i></div>
+                            <div class="drive-info">
+                                <h4>Quy định quản lý ngày nghỉ</h4>
+                                <p>Nghỉ phép, nghỉ bù, lễ Tết</p>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com" target="_blank" class="drive-card">
+                            <div class="drive-icon"><i class="fa-solid fa-users" style="color:#10b981"></i></div>
+                            <div class="drive-info">
+                                <h4>Đăng ký người phụ thuộc</h4>
+                                <p>Giảm trừ gia cảnh thuế TNCN</p>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com" target="_blank" class="drive-card">
+                            <div class="drive-icon"><i class="fa-solid fa-desktop" style="color:#3b82f6"></i></div>
+                            <div class="drive-info">
+                                <h4>Hướng dẫn sử dụng AMIS</h4>
+                                <p>Phần mềm nhân sự</p>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com" target="_blank" class="drive-card">
+                            <div class="drive-icon"><i class="fa-solid fa-handshake-simple" style="color:#8b5cf6"></i></div>
+                            <div class="drive-info">
+                                <h4>Thỏa ước lao động tập thể</h4>
+                                <p>Các quyền lợi chung</p>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com" target="_blank" class="drive-card">
+                            <div class="drive-icon"><i class="fa-solid fa-gavel" style="color:#64748b"></i></div>
+                            <div class="drive-info">
+                                <h4>Nội quy lao động</h4>
+                                <p>Quy định công ty</p>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com" target="_blank" class="drive-card">
+                            <div class="drive-icon"><i class="fa-solid fa-heart-pulse" style="color:#e11d48"></i></div>
+                            <div class="drive-info">
+                                <h4>Bảo hiểm sức khỏe nhân viên</h4>
+                                <p>Khám sức khỏe định kỳ & BH tư</p>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com" target="_blank" class="drive-card">
+                            <div class="drive-icon"><i class="fa-solid fa-door-open" style="color:#6b7280"></i></div>
+                            <div class="drive-info">
+                                <h4>Hướng dẫn nghỉ việc</h4>
+                                <p>Quy trình bàn giao & Offboarding</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resource-section">
+                    <h2><i class="fa-solid fa-file-signature"></i> Biểu mẫu & Đề nghị (Forms)</h2>
+                    <div class="resource-grid">
+                        <a href="https://drive.google.com" target="_blank" class="drive-card">
+                            <div class="drive-icon"><i class="fa-solid fa-folder" style="color:#fbbc04"></i></div>
+                            <div class="drive-info">
+                                <h4>Biểu mẫu</h4>
+                                <p>Các form mẫu xin cấp phát, hành chính</p>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com" target="_blank" class="drive-card">
+                            <div class="drive-icon"><i class="fa-solid fa-folder" style="color:#4285f4"></i></div>
+                            <div class="drive-info">
+                                <h4>Đề nghị</h4>
+                                <p>Các mẫu đơn đề nghị, xét duyệt</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
