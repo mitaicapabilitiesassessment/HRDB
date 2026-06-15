@@ -436,31 +436,128 @@ a {
     color: var(--text-muted);
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
+/* ===================== RESPONSIVE MOBILE ===================== */
+@media (max-width: 768px) {
+
+    /* Ẩn sidebar hoàn toàn */
+    .sidebar {
+        display: none;
+    }
+
+    /* Layout chuyển sang 1 cột */
     .dashboard-container {
         flex-direction: column;
+        padding: 12px 12px 90px 12px; /* padding-bottom để không bị bottom nav che */
+        gap: 12px;
     }
-    
-    .sidebar {
+
+    /* Header gọn lại */
+    .top-header {
+        padding: 10px 14px;
+        gap: 10px;
+    }
+
+    .search-bar {
         width: 100%;
-        height: auto;
-        position: static;
-        flex-direction: row;
+        flex: 1;
+    }
+
+    /* Ảnh hero header nhỏ lại */
+    .page-header {
+        padding: 24px 20px !important;
+    }
+
+    .page-header h1 {
+        font-size: 22px !important;
+    }
+
+    .page-header .icon-bg {
+        display: none;
+    }
+
+    /* Grid thẻ tài liệu full width trên mobile */
+    .departments-grid,
+    .resource-grid,
+    .policy-grid,
+    .job-grid,
+    .engagement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Welcome text nhỏ hơn */
+    .welcome-section h1 {
+        font-size: 20px;
+    }
+
+    /* Training layout 1 cột */
+    .training-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* ===== BOTTOM NAVIGATION BAR (thay thế sidebar menu trên mobile) ===== */
+    .mobile-bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        display: flex;
+        justify-content: space-around;
         align-items: center;
-        justify-content: space-between;
-        padding: 16px;
+        padding: 8px 0 12px 0;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
     }
-    
-    .nav-menu {
-        flex-direction: row;
-        overflow-x: auto;
+
+    .mobile-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        padding: 6px 12px;
+        border-radius: 12px;
+        color: var(--text-muted);
+        font-size: 10px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        min-width: 56px;
     }
-    
-    .user-profile {
-        padding-top: 0;
-        border-top: none;
-        border-left: 1px solid rgba(0,0,0,0.05);
-        padding-left: 20px;
+
+    .mobile-nav-item i {
+        font-size: 20px;
     }
+
+    .mobile-nav-item.active {
+        color: var(--primary);
+    }
+
+    .mobile-nav-item.active i {
+        color: var(--primary);
+    }
+
+    /* Mobile logo bar ở trên cùng */
+    .mobile-top-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 16px 0 16px;
+    }
+
+    .mobile-top-bar .company-logo {
+        max-height: 36px;
+        object-fit: contain;
+    }
+}
+
+/* Ẩn bottom nav trên desktop */
+.mobile-bottom-nav {
+    display: none;
+}
+
+.mobile-top-bar {
+    display: none;
 }
