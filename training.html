@@ -59,8 +59,19 @@
         }
 
         .course-info h3 { margin-bottom: 8px; color: var(--text-main); }
-        .course-meta { display: flex; gap: 16px; font-size: 13px; color: var(--text-muted); }
-        .course-meta span { display: flex; align-items: center; gap: 4px; }
+        .course-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        .course-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            white-space: nowrap;
+        }
         
         .enroll-btn {
             background: #10b981;
@@ -71,8 +82,11 @@
             cursor: pointer;
             font-weight: 500;
             transition: all 0.2s;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
         }
-        .enroll-btn:hover { background: #059669; transform: translateY(-2px); }
+        .enroll-btn:hover { background: #059669; transform: translateY(-2px); color: white; }
 
         /* Drive Widget */
         .drive-widget {
@@ -159,8 +173,7 @@
                                         <span><i class="fa-solid fa-user-tie"></i> Giảng viên: Mr. Trịnh Đức</span>
                                     </div>
                                 </div>
-                                <button class="enroll-btn">Xem chi tiết</button>
-                                 <a href="https://vtiacademy.edu.vn/khoa-hoc-ai-tri-tue-nhan-tao-toan-dien.html" class="enroll-btn">Xem chi tiết</a>
+                                <a href="https://docs.google.com/document/d/1f5UoTVVw1qe2sle0U5Uk7vuESmFowIqIcg8D15KIDoM/edit?usp=sharing" target="_blank" class="enroll-btn">Xem chi tiết</a>
                             </div>
                             
                             <div class="course-card">
@@ -171,8 +184,7 @@
                                         <span><i class="fa-solid fa-laptop"></i> Online (Zoom) bởi A05</span>
                                     </div>
                                 </div>
-                                <button class="enroll-btn">Xem chi tiết</button>
-                                <a href="https://datasecurity.vn/vi/service/dao-tao-chuyen-vien-bao-ve-du-lieu-ca-nhan-dpo-2.htm" target="_blank" class="enroll-btn">Xem chi tiết</a>
+                                <a href="https://docs.google.com/document/d/1f5UoTVVw1qe2sle0U5Uk7vuESmFowIqIcg8D15KIDoM/edit?usp=sharing" target="_blank" class="enroll-btn">Xem chi tiết</a>
                             </div>
                         </div>
                     </div>
@@ -193,12 +205,12 @@
                         <a href="https://docs.google.com/document/d/1f5UoTVVw1qe2sle0U5Uk7vuESmFowIqIcg8D15KIDoM/edit?usp=sharing" target="_blank" class="drive-link-item">
                             <i class="fa-solid fa-folder" style="color: #ea4335; font-size: 24px;"></i>
                             <div>
-                                <h4 style="font-size: 14px;">Tài liệu chương trình Thưởng giới thiệu khách hàng dành cho nhân viên Ideal Life</h4>
-                                <span style="font-size: 12px; color: #666;">Tài liệu sản phẩm, Hướng dẫn sử dụng Ứng dụng, Poster sản phẩm,...</span>
+                                <h4 style="font-size: 14px;">Kỹ năng Mềm (Soft Skills)</h4>
+                                <span style="font-size: 12px; color: #666;">Giao tiếp, Lãnh đạo, Time Management</span>
                             </div>
                         </a>
                         
-                        <a href="https://ideallifevn-my.sharepoint.com/:f:/g/personal/nhung_to_izion24_com_vn/IgDyWuX9UPgBRYYr8Ou4h3_lAUYSQZ6crExPrIEgDj_h82U?e=GriKjx" target="_blank" class="drive-link-item">
+                        <a href="https://docs.google.com/document/d/1f5UoTVVw1qe2sle0U5Uk7vuESmFowIqIcg8D15KIDoM/edit?usp=sharing" target="_blank" class="drive-link-item">
                             <i class="fa-solid fa-folder" style="color: #34a853; font-size: 24px;"></i>
                             <div>
                                 <h4 style="font-size: 14px;">Video Recordings</h4>
