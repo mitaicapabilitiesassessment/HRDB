@@ -353,19 +353,19 @@ a {
 }
 
 .dept-card h3 {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
 }
 
 .dept-card p {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--text-muted);
     line-height: 1.5;
     flex: 1;
 }
 
 .card-link {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     color: var(--primary);
     display: flex;
